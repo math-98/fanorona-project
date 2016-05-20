@@ -1,0 +1,137 @@
+html, body {
+ margin:0;
+ padding:0;
+ }
+ body{
+ background-color: #F1F1F1;
+ font-family : arial;
+ }
+/* Haut de Page */
+#top{
+ margin:auto;
+ background-color: #6f1d1d;
+ box-shadow: 0 5px 5px #aaa;
+ }
+ #logo{
+ width:900px;
+ height: 100px;
+ padding-top: 25px;
+}
+#logo a{
+ text-decoration: none;
+ color: white;
+ font-size: 72px;
+ font-family : DejaVu Sans;
+}
+#menu {
+ border-top: 1px solid white;
+ width: 340px;
+ height: 50px;
+ margin:auto;
+ list-style-type:none;
+ }
+#menu li {
+ padding-top: 5px;
+ float:left;
+ width:100px;
+ height: 25px;
+ text-align: center;
+ }
+ #menu li:hover {
+ padding-top: 5px;
+ float:left;
+ width:100px;
+ height: 25px;
+ text-align: center;
+ background-color: #3c0d0d;
+ transition: background 0.5s;
+ }
+ #menu a{
+ text-decoration:none;
+ color: white;
+ }
+ /* Corps de Page */
+ #contenu{
+ height:auto;
+ width:900px;
+ margin:auto;
+ margin-top: 20px;
+ margin-bottom: 20px;
+ background-color: white;
+ box-shadow: 0 1px 3px #aaa;
+ padding: 10px 10px 10px 10px;
+ }
+ #contenu h2, h4{
+ color:#3F3F3F;
+ margin-bottom: 0px;
+ }
+ #accueil{
+ height:600px;
+ text-align:justify;
+ }
+ #text{
+ height:1300px;
+ }
+ #text p{
+ width:600px;
+ float:left;
+ }
+ #form{
+ height:400px;
+ }
+ #groupe{
+ height:400px;;
+ }
+ #champ{
+ background-color: white;
+ border: 2px solid #A8A8A6;
+ border-radius: 4px;
+ height: 30px;
+ }
+ #mess{
+ background-color: white;
+ border: 2px solid #A8A8A6;
+ border-radius: 4px;
+ width:300px;
+ height:100px;
+ resize:none;
+ }
+ #submit{
+ cursor:pointer;
+ background:#3F3F3F;
+ width:100px;
+ height:30px;
+ color:white;
+ border:none;
+ border-radius: 2px;
+ }
+ #submit:hover{
+ background: #4D4CDF;
+ transition: background 0.5s;
+ }
+ #haut{
+ cursor:pointer;
+ position:fixed;
+ top: 570px;
+ left: 80px;
+ background:#3F3F3F;
+ width:37px;
+ height:37px;
+ color:white;
+ border:none;
+ border-radius: 20px;
+ font-size: 30px;
+ }
+ #haut:hover{
+ background: #6f1d1d;
+ transition: background 0.5s;
+ }
+ /* Bas de Page */
+ #bas{
+  background-color: #3F3F3F;
+  padding-top:5px;
+  height:40px; 
+  text-align: center;
+  color: white;
+  margin:auto;
+ }
