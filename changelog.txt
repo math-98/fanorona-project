@@ -1,29 +1,29 @@
-Prévu en A5
- * Codage des différents cas de fin de jeu (Plus de pions chez un des joueurs, plus de coups possibles, partie stoppée volontairement,).
- * Codage d'une boucle qui vérifie quels pions peuvent, si on les déplace, en bouffer d'autres et qui les montre (Si il n'y en a plus Fin du jeu, le gagnant est celui qui a gardé le plus de pions).
- * Système de personnalisation de l'aparence : Différents thèmes (Couleurs de background, de pions, ...) sont proposés à l'utilisateur.
- * Ajout d'un bout d'interface qui montre à qui c'est de jouer (Plus ptet deux ou trois autres trucs).
+PrÃ©vu en A5
+ * Codage des diffÃ©rents cas de fin de jeu (Plus de pions chez un des joueurs, plus de coups possibles, partie stoppÃ©e volontairement,).
+ * Codage d'une boucle qui vÃ©rifie quels pions peuvent, si on les dÃ©place, en bouffer d'autres et qui les montre (Si il n'y en a plus Fin du jeu, le gagnant est celui qui a gardÃ© le plus de pions).
+ * SystÃ¨me de personnalisation de l'aparence : DiffÃ©rents thÃ¨mes (Couleurs de background, de pions, ...) sont proposÃ©s Ã  l'utilisateur.
+ * Ajout d'un bout d'interface qui montre Ã  qui c'est de jouer (Plus ptet deux ou trois autres trucs).
 
-Version A4
- * Correction du bug si on tentait de désélectionner un pion (Le jeu plantait et ne voulais plus déplacer le pion) : Réactivation de la possibilité de désélectionnner + Si lorsque un pion est sélectionné on clique sur un autre de la même famille, la sélection se transfère.
- * Page Web d'aide implantée en local.
+Version A4tÃ© de dÃ©
+ * Correction du bug si on tentait de dÃ©sÃ©lectionner un pion (Le jeu plantait et ne voulais plus dÃ©placer le pion) : RÃ©activation de la possibilisÃ©lectionnner + Si lorsque un pion est sÃ©lectionnÃ© on clique sur un autre de la mÃªme famille, la sÃ©lection se transfÃ¨re.
+ * Page Web d'aide implantÃ©e en local.
  * Correction des couleurs (Plus harmonieuses entre elles) et effet d'ombre sous le plateau de jeu.
- * Ajout d'une restriction : Si la popup de choix est à l'écran il n'est pas possible de cliquer dans la fenêtre de jeu (Ca évite que la popup soit masquée involontairement).
- * Fonctions du jeu triées par ordre alphabétique (Pas utile sous Geany ou Npp mais sur l'IDE de Python rend la lecture plus facile).
+ * Ajout d'une restriction : Si la popup de choix est Ã  l'Ã©cran il n'est pas possible de cliquer dans la fenÃªtre de jeu (Ca Ã©vite que la popup soit masquÃ©e involontairement).
+ * Fonctions du jeu triÃ©es par ordre alphabÃ©tique (Pas utile sous Geany ou Npp mais sur l'IDE de Python rend la lecture plus facile).
 
 Version A3
- * Ajout du système de sauvegardes/chargement, quelques minimes améliorations à y apporter (Possibilité de recharger alors qu'un pion était sélectionné par exemple). 2 sauvegardes fournies pour tester (Complet.sav = Etat de base du plateau ; test.sav = Quelques coups de faits).
- * Le fichier du jeu se nomme désormais "game.py" et non plus "interface.py" (Plus logique).
- * Ajout d'un arrière-plan au jeu (Reste à trouver comment en ajouter un au canevas du plateau).
- * Ajout d'une barre de menus (Les boutons de débugs y ont étés déplacés).
- * Ajout d'avertissements à destination de l'utilisateur si il tente de redémarrer le jeu ou de le fermer.
- * Correction d'un bug sur la prise de pions quand on s'approche des bords (Le jeu prenait également les pions de l'autre côté).
- * Implantation de la règle sur l'impossibilité de prendre par approche et par éloignement en même temps.
+ * Ajout du systÃ¨me de sauvegardes/chargement, quelques minimes amÃ©liorations Ã  y apporter (PossibilitÃ© de recharger alors qu'un pion Ã©tait sÃ©lectionnÃ© par exemple). 2 sauvegardes fournies pour tester (Complet.sav = Etat de base du plateau ; test.sav = Quelques coups de faits).
+ * Le fichier du jeu se nomme dÃ©sormais "game.py" et non plus "interface.py" (Plus logique).
+ * Ajout d'un arriÃ¨re-plan au jeu (Reste Ã  trouver comment en ajouter un au canevas du plateau).
+ * Ajout d'une barre de menus (Les boutons de dÃ©bugs y ont Ã©tÃ©s dÃ©placÃ©s).
+ * Ajout d'avertissements Ã  destination de l'utilisateur si il tente de redÃ©marrer le jeu ou de le fermer.
+ * Correction d'un bug sur la prise de pions quand on s'approche des bords (Le jeu prenait Ã©galement les pions de l'autre cÃ´tÃ©).
+ * Implantation de la rÃ¨gle sur l'impossibilitÃ© de prendre par approche et par Ã©loignement en mÃªme temps.
 
 Version A2 :
- * Les pions peuvent également prendre les autres par éloignement.
- * Un tour continue tant que le pion sélectionné peut en bouffer d'autres.
- * Pendant un tour un pion ne peut pas revenir sur une ancienne position (Les spots bannis sont représentés par des carrés).
- * On ne peut plus désélectionner un pion, en revanche seuls les pions pouvant en bouffer d'autres peuvent être sélectionnés.
- * IDLE sert de console de débuguage (Il donne des infos sur le pion sélectionné, le tour en cours, le mouvement détecté, ...).
- * La page web d'aide du jeu a été téléchargée (Et éditée de façon à fonctionner en local), reste à réussir à l'implanter dans le programme.
+ * Les pions peuvent Ã©galement prendre les autres par Ã©loignement.
+ * Un tour continue tant que le pion sÃ©lectionnÃ© peut en bouffer d'autres.
+ * Pendant un tour un pion ne peut pas revenir sur une ancienne position (Les spots bannis sont reprÃ©sentÃ©s par des carrÃ©s).
+ * On ne peut plus dÃ©sÃ©lectionner un pion, en revanche seuls les pions pouvant en bouffer d'autres peuvent Ãªtre sÃ©lectionnÃ©s.
+ * IDLE sert de console de dÃ©buguage (Il donne des infos sur le pion sÃ©lectionnÃ©, le tour en cours, le mouvement dÃ©tectÃ©, ...).
+ * La page web d'aide du jeu a Ã©tÃ© tÃ©lÃ©chargÃ©e (Et Ã©ditÃ©e de faÃ§on Ã  fonctionner en local), reste Ã  rÃ©ussir Ã  l'implanter dans le programme.

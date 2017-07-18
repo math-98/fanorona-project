@@ -1,9 +1,0 @@
-Version A4
-
-Version A3
- - Si on clic sur un autre pion alors qu'il y en a un déjà de sélectionné le jeu "plante" et ne veut plus déplacer => CORRIGE EN A4
- - A la fin du jeu si lorsque qu'aucun autre déplacement n'est possible le jeu est bloqué (On ne peut plus rien faire) => SERA CORRIGE PROCHAINEMENT (Normalement A5)
- - Les sauvegardes générées sous Windows ne fonctionnent pas sous Linux (A vérifier si l'inverse est également vrai) => SERA CORRIGE PROCHAINEMENT (Normalement A5)
-
-Version A2 :
-< Aucun bug recensé >
