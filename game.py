@@ -103,6 +103,7 @@ class MyApp():
             def unlist(entree):
                 """Convertit une liste au format str en vraie liste"""
                 temp = (entree[1:-1]).split(', ') #On retire les deux crochets (Début et fin) et on sépare les éléments
+                print("temp",temp)
                 sortie = []
                 for i in range(len(temp)):
                     if temp[i]!='':
@@ -353,6 +354,7 @@ class MyApp():
             '''
             global selected, dest, banned_spots
             result = possibilitees(dest)
+            print(bool(result))
             if result:
                 xd = (dest%9)*taille_case+marge_interne
                 yd = (dest//9)*taille_case+marge_interne
@@ -530,10 +532,14 @@ class MyApp():
             global libre, pos, spots
             libre = []
             pos = []
+            print("banned_spots :",banned_spots)
+            print("pions_j1 :",pions_j1)
+            print("pions_j2 :",pions_j2)
             #On évalue les positions autorisées
             for i in range(45):
                 if not (i in pions_j1 or i in pions_j2):
                     libre.append(i)
+            print("libre 1 :",libre)
             #On retire les spots bannis
             for i in range(len(banned_spots)):
                 libre.remove(banned_spots[i])
@@ -577,51 +583,67 @@ class MyApp():
             
             #Test prise pion
             spots = []
+            print("---")
             for i in range(len(pos)):
+                print("pos[i] :",pos[i])
                 xs = (num_case%9)
                 ys = (num_case//9)
                 xd = (pos[i]%9)
                 yd = (pos[i]//9)
                 dx = xd-xs
+                print("dx :",dx)
                 dy = yd-ys
+                print("dy :",dy)
 
                 if joueur == 0:
                     liste = pions_j2
                 else:
                     liste = pions_j1
                 
+               print("pos[i]-num_case :",pos[i]-num_case)
+                
                 #Déplacement haut
                 if dx==0 and dy<0 and (pos[i]-num_case)==(-9) and ((pos[i]-9) in liste or (num_case+9) in liste):
+                    print("Oui")
                     spots.append(pos[i])
 
                 #Déplacement bas
                 if dx==0 and dy>0 and (pos[i]-num_case)==9 and ((pos[i]+9) in liste or (num_case-9) in liste):
+                    print("Oui")
                     spots.append(pos[i])
 
                 #Déplacement gauche
                 if dx<0 and dy==0 and (pos[i]-num_case)==(-1) and ((pos[i]-1) in liste or (num_case+1) in liste):
+                    print("Oui")
                     spots.append(pos[i])
 
                 #Déplacement droite
                 if dx>0 and dy==0 and (pos[i]-num_case)==1 and ((pos[i]+1) in liste or (num_case-1) in liste):
+                    print("Oui")
                     spots.append(pos[i])
                 
                 #Déplacement haut-gauche
                 if dx==dy and dx<0 and (pos[i]-num_case)==(-10) and ((pos[i]-10) in liste or (num_case+10) in liste):
+                    print("Oui")
                     spots.append(pos[i])
 
                 #Déplacement haut-droite
                 if dx==(-1)*dy and dx>0 and (pos[i]-num_case)==(-8) and ((pos[i]-8) in liste or (num_case+8) in liste):
+                    print("Oui")
                     spots.append(pos[i])    
 
                 #Déplacement bas-gauche
                 if dx==(-1)*dy and dx<0 and (pos[i]-num_case)==8 and ((pos[i]+8) in liste or (num_case-8) in liste):
+                    print("Oui")
                     spots.append(pos[i])
 
                 #Déplacement bas-droite
                 if dx==dy and dx>0 and (pos[i]-num_case)==10 and ((pos[i]+10) in liste or (num_case-10) in liste):
+                    print("Oui")
                     spots.append(pos[i])
 
+                print("---")
+            print("spots :",spots)
             #Résultat
             if len(spots)!=0:
                 return True
@@ -879,6 +901,10 @@ class MyApp():
                 num_case = ligne*9+colonne
             else:
                 num_case = -1
+                
+            print("joueur :",joueur)
+            print("num_case :",num_case)
+            print("selected :",selected)
 
             x_pion = (num_case%9)*taille_case+marge_interne
             y_pion = (num_case//9)*taille_case+marge_interne
@@ -911,7 +937,9 @@ class MyApp():
                     banned_spots.append(selected)
                     dest = num_case
                     type_move = deplacement(dest)
+                    print("type_move :",type_move)
                     evalue = evaluation_prise_pion()
+                    print("evalue :",evalue)
                     if evalue == "Double":
                         open_choix()
                     elif evalue == "Approche":
@@ -920,6 +948,7 @@ class MyApp():
                     else:
                         prise_pion_eloignement()
                         fin_tour()
+            print("---------")
     
         interface() 
     #----------------------------------------------------------------------
